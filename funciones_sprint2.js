@@ -176,9 +176,9 @@ function dibujarCuadradoAjedrez(altura){
 //4 piramide izquierda 
 
 function hacerPiramide(altura){
-    for (j=1; j<=altura;j++){
+    for (i=1; i<=altura;i++){
         document.write("<br>")
-        for (var i=0;i<j;i++){
+        for (var j=0;i>j;j++){
             document.write("*")
         }
     }
@@ -212,29 +212,50 @@ function piramideCentradaInvertida(altura){
 
 // diamante 
 
-*
-***
-*****
-*******
-*********
-*******
-*****
-***
-*
-
-function piramideDiamante(altura){
+function piramideCentrada(altura){
     var astericos=1
     for (var j=1;j<=altura; j++){
         document.write("<br>")
         for(var i=1; i<=astericos;i++){
             document.write("*")
-            if(i>astericos){
-                astericos=astericos-2
-            }
         }
         astericos=astericos+2;
     } 
 }
+
+function dibujarLinea(anchura){
+    document.write("<br>")
+    for (var i=1;i<=anchura;i++){
+        document.write("*")
+    }
+}
+
+function piramideCentradaInvertida(altura){
+    var astericos=altura+(altura-1)
+    for (var j=1;j<=altura; j++){
+        document.write("<br>")
+        for(var i=1; i<=astericos;i++){
+            document.write("*")
+        }
+        astericos=astericos-2;
+    } 
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
@@ -284,9 +305,6 @@ function miFuncion(){
 
 miFuncion();
 
-
-
-// bonus 
 
 
 

@@ -311,16 +311,178 @@ for (var i=0; i<20; i++){
 }
 console.log(array1);
 
-////////////nuevos ejercicios////////////
+////////////nuevos ejercicios////////////   revisar con nelson
+//Ejercicios de divisores con while (o for)
+//Encontrar todos los divisores de un número.
 
-//Ejercicios de divisores con while (o for)Encontrar todos los divisores de un número.
+var divisorN=prompt("introducir numero");
+var i=1;
 
-//Determinar si un número ingresado por el usuario en un loop es primo o no, validar que el número ingresado sea mayor o igual a dos.
+while(i<= divisorN){    
+    while (i<=n){
+        acumulador += i
+        document.write(i)
+        i++
+    }
+    console.log(acumulador)
+    i++
+}
 
-////Crear un programa que determine si un número es perfecto o no, (se dice que un número es perfecto si el número es igual a sus divisores, ejemplos 6 = 1 + 2 + 3)
+/////////////////////////////////////////////COMPLICADO///////////////////////////////////////////////
+//Determinar si un número ingresado por el usuario en un loop es primo o no, 
+//validar que el número ingresado sea mayor o igual a dos.
+
+
+var numero = +prompt("introducir numero");
+var esPrimo=true;
+// Todos son inocentes hasta que se demuestra lo contrario
+for(var i=2;i<numero;i++){
+    if(numero%i ===0){
+        esPrimo = false 
+    }
+}
+if(esPrimo){
+    document.write("es primo")
+}
+else{
+    document.write("no es primo")
+}
+
+
+//opcion 2 (revisar bien )
+var numero=prompt("introducir numero");
+var esPrimo=true;
+for(var i=2;i<numero;i++){
+    esPrimo &= numero%i !==0
+}
+if(esPrimo){
+    document.write("es primo")
+}
+else{
+    document.write("no es primo")
+}
+var divisorN=prompt("introducir numero");
+var i=1;
+
+while(i<= divisorN){
+    if (divisorN %i ===0 ){
+        document.write(i)
+    }
+    i++
+}
+
+
+////Crear un programa que determine si un número es perfecto o no, (se dice que un número es perfecto 
+//si el número es igual a sus divisores, ejemplos 6 = 1 + 2 + 3)
+
+var numperfect=(+(prompt("introducir numero")));
+var acumulador=0;
+for(var i=1; i<numperfect;i++){
+    if(numperfect%i === 0){
+        acumulador += i
+    }
+}
+if(numperfect=== acumulador){
+    document.write("Es un numero perfecto") 
+}
+else{
+    document.write("No es un numero perfecto")  
+}
+
+//BONUS//
+// 1. CREAR UNA FUNCION QUE DEPENDIENDO DE UN NUMERO N IMPRIMA UNA FIGURA COMO LA SIGUIENTE
+//n=1 "a", n=2 "a" "aa"
+
+function imprimirFigura(n){
+    for(var i=1; i<=n;i++){
+        document.write("<br>")
+        for(var j=0;i>j;j++){
+        document.write("a")
+        }
+    }
+}
+
+
+
 
 //### Doble loop
-
 //Generar los primeros N números primos, donde n es ingresado por el usuario.
 
+var n=(+(prompt("introducir numero")));
+for(var i=2;i<n;i++){
+    var esPrimo=true
+    var j=2
+
+    while (j<i){
+        if(i%j === 0){
+            esPrimo = false 
+        }
+        j++
+    }
+
+    if(esPrimo){
+        document.write(i + "<br />")
+    }
+}
+//### Doble loop
+//Generar los primeros N números primos, donde n es ingresado por el usuario.
+
+var n = +prompt("introducir numero");
+for(i=2;i<n;i++){
+    var esPrimo=true
+
+    for(var j=2;j<i;j++){
+        if(i%j === 0){
+            esPrimo = false 
+        }
+    }
+
+    if(esPrimo){
+        document.write(i + "<br />")
+    }
+}
+
+
 //Generar los primeros N números perfectos.
+
+
+var n=(+(prompt("introducir numero")));
+for(var i=1; i<n;i++){
+    var acumulador=0;
+    for(j=1; j<i;j++){
+        if(i%j === 0){
+            acumulador += j
+        }
+    }
+
+    if(i === acumulador){
+        document.write(i + "<br />")
+    }
+}
+
+
+
+//String y arrays
+
+//El usuario ingrese un string con varias palabras separadas por coma en un popup y se deben convertir en un array, (el usuario ingresa: "1,2,3,4,5" y se convierte en [1,2,3,4,5])
+
+
+//Convertir un array ingresado dentro del código en un string (existe un método en javascript para hacerlo)
+
+
+
+//Existen dos arrays, cada uno con 5 palabras, 
+//generar un nuevo array con la intersección de ambos elementos.
+//(Ejemplo: [1,2,3] unión [1,2,4] = [1,2]
+
+var ax=[1,2,3,4,5];
+var bx=[1,2,3,6,7];
+
+
+//Existen dos arrays, cada uno con 5 palabras, generar un nuevo array con la unión de ambos elementos, (Ejemplo: [1,2,3] unión [1,2,4] = [1,1,2,2,3,4]
+
+var array1=[1,2,3,4,5];
+var array2=[1,1,2,3,4];
+
+var array3=array1.concat(array2)
+document.write(array3);
