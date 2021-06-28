@@ -242,27 +242,6 @@ function piramideCentradaInvertida(altura){
 }
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // funciones
 //1. Crear una función que reciba un valor cualquiera y lo muestre ocupando console.log(), llamar a la función pasando el valor 5
 
@@ -304,25 +283,6 @@ function miFuncion(){
 }
 
 miFuncion();
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 
 
